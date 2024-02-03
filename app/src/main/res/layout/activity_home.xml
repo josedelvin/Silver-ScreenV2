@@ -1,0 +1,123 @@
+<!-- res/layout/activity_home.xml -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#15141F"
+    tools:context=".Home">
+
+  <!-- Your other layout components go here -->
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <androidx.viewpager2.widget.ViewPager2
+          android:id="@+id/carouselViewPager"
+          android:layout_width="match_parent"
+          android:layout_height="450dp" />
+
+      <!-- Add a placeholder view to push the movie listings to the bottom -->
+      <View
+          android:id="@+id/placeholderView"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:layout_below="@id/marvelTitleTextView"
+          android:background="#15141F" />
+
+      <TextView
+          android:id="@+id/marvelTitleTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="16dp"
+          android:fontFamily="@font/lato_bold"
+          android:text="Marvel studios"
+          android:textColor="#FFFFFF"
+          android:textSize="20sp"
+          android:textStyle="bold" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/marvelRecyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingStart="16dp"
+          android:paddingEnd="16dp"
+          android:paddingBottom="10dp" />
+
+      <TextView
+          android:id="@+id/bestmoviesTitleTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="16dp"
+          android:fontFamily="@font/lato_bold"
+          android:text="Best Movies"
+          android:textColor="#FFFFFF"
+          android:textSize="20sp"
+          android:textStyle="bold" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/bestmoviesRecyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:paddingStart="16dp"
+          android:paddingEnd="16dp"
+          android:paddingBottom="10dp"
+          android:background="#15141F" />
+
+      <TextView
+          android:id="@+id/comedymoviesTitleTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="16dp"
+          android:fontFamily="@font/lato_bold"
+          android:text="Comedy Movies"
+          android:textColor="#FFFFFF"
+          android:textSize="20sp"
+          android:textStyle="bold" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/comedymoviesRecyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:paddingStart="16dp"
+          android:paddingEnd="16dp"
+          android:paddingBottom="10dp"
+          android:background="#15141F" />
+
+      <TextView
+          android:id="@+id/actionTitleTextView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="16dp"
+          android:fontFamily="@font/lato_bold"
+          android:text="Action Movies"
+          android:textColor="#FFFFFF"
+          android:textSize="20sp"
+          android:textStyle="bold" />
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/actionmoviesRecyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:paddingStart="16dp"
+          android:paddingEnd="16dp"
+          android:paddingBottom="10dp"
+          android:background="#15141F" />
+    </LinearLayout>
+  </ScrollView>
+
+</FrameLayout>

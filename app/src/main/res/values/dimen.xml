@@ -1,0 +1,6 @@
+<!-- res/values/dimens.xml -->
+
+<resources>
+    <dimen name="chipCornerRadius">15dp</dimen>
+    <!-- Adjust the value as needed -->
+</resources>

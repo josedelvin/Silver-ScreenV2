@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/confirmAndRegister_btn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".Register">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="text"
+        android:paddingLeft="20dp"
+        android:hint="Username"
+        android:textColor="@color/white"
+        android:textColorHint="@color/inputBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.355" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="20dp"
+        android:hint="Email"
+        android:textColor="@color/white"
+        android:textColorHint="@color/inputBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.474" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:hint="Password"
+        android:textColor="@color/white"
+        android:textColorHint="@color/inputBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.594" />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="textPassword"
+        android:paddingLeft="20dp"
+        android:hint="Confirm Password"
+        android:textColor="@color/white"
+        android:textColorHint="@color/inputBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.718" />
+
+    <ImageView
+        android:id="@+id/RegisterLogo"
+        android:layout_width="452dp"
+        android:layout_height="225dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        app:srcCompat="@mipmap/sslogo" />
+
+    <Button
+        android:id="@+id/registerButton"
+        style="@style/LoginButton"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="125dp"
+        android:onClick="onClick"
+        android:text="Agree and Register"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

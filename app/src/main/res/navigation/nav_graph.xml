@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/triviaListFragment">
+
+    <fragment
+        android:id="@+id/triviaFragment"
+        android:name="com.example.silver_screen.TriviaFragment"
+        android:label="fragment_trivia"
+        tools:layout="@layout/fragment_trivia" >
+        <action
+            android:id="@+id/action_triviaFragment_to_triviaResultFragment"
+            app:destination="@id/triviaResultFragment" />
+        <argument
+            android:name="triviaId"
+            app:argType="string"
+            android:defaultValue="null" />
+        <argument
+            android:name="totalQnsCount"
+            app:argType="long"
+            android:defaultValue="0L" />
+        <action
+            android:id="@+id/action_triviaFragment_to_triviaListFragment"
+            app:destination="@id/triviaListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaListFragment"
+        android:name="com.example.silver_screen.TriviaListFragment"
+        android:label="fragment_trivia_list"
+        tools:layout="@layout/fragment_trivia_list" >
+        <action
+            android:id="@+id/action_triviaListFragment_to_triviaDetailFragment"
+            app:destination="@id/triviaDetailFragment" />
+        <action
+            android:id="@+id/action_triviaListFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaDetailFragment"
+        android:name="com.example.silver_screen.TriviaDetailFragment"
+        android:label="fragment_trivia_detail"
+        tools:layout="@layout/fragment_trivia_detail" >
+        <action
+            android:id="@+id/action_triviaDetailFragment_to_triviaFragment"
+            app:destination="@id/triviaFragment" />
+        <argument
+            android:name="position"
+            app:argType="integer"
+            android:defaultValue="0" />
+        <action
+            android:id="@+id/action_triviaDetailFragment_to_triviaListFragment"
+            app:destination="@id/triviaListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/triviaResultFragment"
+        android:name="com.example.silver_screen.TriviaResultFragment"
+        android:label="fragment_trivia_result"
+        tools:layout="@layout/fragment_trivia_result" >
+        <action
+            android:id="@+id/action_triviaResultFragment_to_triviaListFragment"
+            app:destination="@id/triviaListFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.silver_screen.MainActivity"
+        android:label="MainActivity" />
+</navigation>

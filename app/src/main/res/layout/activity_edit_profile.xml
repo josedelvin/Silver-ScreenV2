@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#15141F"
+    tools:context=".EditProfileActivity">
+
+    <ImageView
+        android:id="@+id/ivEditProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@mipmap/dummyprofile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabelUpdatedName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Name"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivEditProfile"
+        app:layout_constraintBottom_toTopOf="@id/edtUpdatedName" />
+
+    <EditText
+        android:id="@+id/edtUpdatedName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Enter Name"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/inputBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelUpdatedName"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="200dp" />
+
+    <TextView
+        android:id="@+id/tvLabelUpdatedEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Email"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtUpdatedName"
+        app:layout_constraintBottom_toTopOf="@id/edtUpdatedEmail" />
+
+    <EditText
+        android:id="@+id/edtUpdatedEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Enter Email"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHint="@color/inputBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelUpdatedEmail"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="200dp" />
+
+    <Button
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Save Changes"
+        android:textColor="@android:color/white"
+        android:background="@color/loginButtonColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtUpdatedEmail"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_min="200dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

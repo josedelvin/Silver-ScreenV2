@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="main">#15141F</color>
+    <color name="yellow">#F2C94C</color>
+    <color name="LoginButton">#FFFFFF</color>
+    <color name="RegisterButton">#FFFFFF</color>
+    <color name="AuthenticationText">#8391A1</color>
+    <color name="colorPrimary">#3087CC</color>
+    <color name="loginButtonColor">#1E232C</color>
+    <color name="inputBox">#A7A7A7</color>
+    <color name="greenColor">#00FF00</color>
+    <color name="redColor">#FF0000</color>
+
+
+    <color name="chipBackground">#1e1d29</color>
+        <color name="chipText">#BCBCBC</color>
+        <!-- Add more color resources as needed -->
+
+</resources>

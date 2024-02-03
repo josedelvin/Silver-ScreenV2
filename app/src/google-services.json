@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "17129021557",
+    "firebase_url": "https://silverscreen-ed63b-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "silverscreen-ed63b",
+    "storage_bucket": "silverscreen-ed63b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:17129021557:android:9ec2e7d1337f7d8e87183c",
+        "android_client_info": {
+          "package_name": "com.example.silver_screen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjX019xJ9n4yclNEUalRo6rE5Sw5sue2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

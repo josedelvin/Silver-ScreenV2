@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+
+    <style name="MainTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">#15141F</item>
+        <item name="colorPrimaryDark">#3a5900</item>
+        <item name="colorAccent">#7dbd06</item>
+    </style>
+
+    <style name="LoginButton" parent="@android:style/Widget.Button">
+<item name="android:textSize">18sp</item>
+<item name="android:textColor">#000000</item>
+        <item name="android:background">@drawable/button_style</item>
+</style>
+    <style name="RegisterButton">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/button_style_transparent</item>
+    </style>
+
+    <style name="CustomProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/custom_progress_bar</item>
+    </style>
+
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+
+    <!-- res/values/styles.xml -->
+    <style name="MyTabLayout" parent="Widget.Design.TabLayout">
+        <!-- Indicator color when tab is selected -->
+        <item name="tabIndicatorColor">#FF4081</item>
+
+        <!-- Text color for selected tab -->
+        <item name="tabSelectedTextColor">#FFFFFF</item>
+
+        <!-- Text color for unselected tabs -->
+        <item name="tabTextColor">#BDBDBD</item>
+    </style>
+
+    <style name="LoginButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">Login</item>
+        <item name="android:layout_marginTop">48dp</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="android:background">@drawable/button_background</item> <!-- Use the new background drawable -->
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.circular" parent="ShapeAppearance.MaterialComponents">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+</resources>

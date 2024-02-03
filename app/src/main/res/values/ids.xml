@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="forgotPasswordTextView" type="id" />
+    <item name="continueAsGuestBtn" type="id" />
+    <item name="showsRecyclerView" type="id" />
+    <item name="fragmentContainer" type="id" />
+</resources>

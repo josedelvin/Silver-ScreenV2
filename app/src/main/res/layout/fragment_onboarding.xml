@@ -1,0 +1,63 @@
+<!-- res/layout/fragment_onboarding.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/main">
+
+
+        <ImageView
+            android:id="@+id/onboardingImage"
+            android:layout_width="310dp"
+            android:layout_height="206dp"
+            android:layout_marginTop="200dp"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+
+        <RelativeLayout
+            android:id="@+id/whiteBoxLayout"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF">
+
+                <TextView
+                    android:id="@+id/onboardingText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Create your Profile\nComplete your profile to help you find movies that will be right for you."
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:ignore ="HardcodedText" />
+                <TextView
+                    android:id="@+id/onboardingDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/onboardingText"
+                    android:layout_marginTop="16dp"
+                    android:background="#FFFFFF"
+                    android:text="Your additional description goes here."
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+                <!-- Next button -->
+                <Button
+                    android:id="@+id/nextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/onboardingDescription"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@android:color/transparent"
+                    android:text="Next"
+                    tools:ignore="HardcodedText" />
+
+
+</RelativeLayout>
+</RelativeLayout>
