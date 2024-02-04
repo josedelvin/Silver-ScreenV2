@@ -1,6 +1,9 @@
 package com.example.silver_screen;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -9,6 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -117,6 +122,32 @@ public class Home extends AppCompatActivity {
 
 
         startAutoScroll();
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int itemId = item.getItemId();
+
+                if (itemId == R.id.home) {
+                    // Already in Home page so no need to navigate
+                    return true;
+                } else if (itemId == R.id.search) {
+                    // Navigate to DiscoverActivity
+                    startActivity(new Intent(Home.this, DiscoverActivity.class));
+                    return true;
+                } else if (itemId == R.id.wishlist) {
+                    // Navigate to MainTriviaPage
+                    startActivity(new Intent(Home.this, MainTriviaPage.class));
+                    return true;
+                } else if (itemId == R.id.profile) {
+                    // Navigate to ProfileActivity
+                    startActivity(new Intent(Home.this, ProfileActivity.class));
+                    return true;
+                }
+
+                return false; // Important for correct functioning
+            }
+        });
     }
 
     private void loadCarouselImagesFromDatabase() {

@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            startActivity(i3);
 //        }
         else if (id == R.id.homepage_btn) {
-            Intent i3 = new Intent(this, MainTriviaPage.class);
+            Intent i3 = new Intent(this, Home.class);
             startActivity(i3);
 //            // Navigate to TriviaListFragment
 //            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

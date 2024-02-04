@@ -5,8 +5,10 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -20,7 +22,10 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -82,6 +87,47 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivityForResult(intent, 1); // Use any positive integer as the requestCode
             }
         });
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            public boolean onNavigationItemSelected(@androidx.annotation.NonNull MenuItem item) {
+                int itemId = item.getItemId();
+
+                if (itemId == R.id.home) {
+                    // Navigate to HomeActivity
+                    startActivity(new Intent(ProfileActivity.this, Home.class));
+                    return true;
+                } else if (itemId == R.id.search) {
+                    // Navigate to DiscoverActivity
+                    startActivity(new Intent(ProfileActivity.this, DiscoverActivity.class));
+                    return true;
+                } else if (itemId == R.id.wishlist) {
+                    // Already on MainTriviaPage, no need to navigate
+                    return true;
+                } else if (itemId == R.id.profile) {
+                    // Already in Profile page so no need to navigate
+                    return true;
+                }
+
+                return false;
+            }
+        });
+
+        // Customize colors for selected and unselected states
+        int[][] states = new int[][] {
+                new int[] { android.R.attr.state_selected },
+                new int[] { -android.R.attr.state_selected }
+        };
+
+        int[] colors = new int[] {
+                ContextCompat.getColor(ProfileActivity.this, R.color.white),
+                ContextCompat.getColor(ProfileActivity.this, R.color.grey)
+        };
+
+        ColorStateList colorStateList = new ColorStateList(states, colors);
+        bottomNavigationView.setItemIconTintList(colorStateList);
+
+        bottomNavigationView.setSelectedItemId(R.id.profile);
 
     }
 

@@ -1,10 +1,13 @@
     package com.example.silver_screen;
 
+    import android.content.Intent;
     import android.os.Bundle;
     import android.text.TextUtils;
     import android.util.Log;
+    import android.view.MenuItem;
     import android.view.View;
 
+    import androidx.annotation.NonNull;
     import androidx.annotation.Nullable;
     import androidx.appcompat.app.AppCompatActivity;
     import androidx.appcompat.widget.SearchView;
@@ -13,6 +16,8 @@
     import androidx.recyclerview.widget.RecyclerView;
 
     import com.firebase.ui.database.FirebaseRecyclerOptions;
+    import com.google.android.material.bottomnavigation.BottomNavigationView;
+    import com.google.android.material.navigation.NavigationBarView;
     import com.google.android.material.tabs.TabLayout;
     import com.google.firebase.database.DatabaseReference;
     import com.google.firebase.database.FirebaseDatabase;
@@ -75,6 +80,35 @@
                 }
             });
             updateAdapterWithTab("Movies");
+
+            BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+            bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    int itemId = item.getItemId();
+
+                    if (itemId == R.id.home) {
+                        // Navigate to HomeActivity
+                        startActivity(new Intent(DiscoverActivity.this, Home.class));
+                        return true;
+                    } else if (itemId == R.id.search) {
+                        // Already on DiscoverActivity, no need to navigate
+                        return true;
+                    } else if (itemId == R.id.wishlist) {
+                        // Navigate to MainTriviaPage
+                        startActivity(new Intent(DiscoverActivity.this, MainTriviaPage.class));
+                        return true;
+                    } else if (itemId == R.id.profile) {
+                        // Navigate to ProfileActivity
+                        startActivity(new Intent(DiscoverActivity.this, ProfileActivity.class));
+                        return true;
+                    }
+
+                    return false;
+                }
+            });
+
+            bottomNavigationView.setSelectedItemId(R.id.search);
+
         }
 
 

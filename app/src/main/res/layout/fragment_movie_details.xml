@@ -137,6 +137,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:theme="@style/Widget.MaterialComponents.Chip.Choice"
                 android:orientation="horizontal">
 
                 <!-- Each genre will be added dynamically using Java code -->

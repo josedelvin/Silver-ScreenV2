@@ -67,4 +67,9 @@
     </style>
 
 
+    <!-- res/values/styles.xml -->
+    <style name="MyBottomNavigationStyle" parent="Theme.SilverScreen">
+    </style>
+
+
 </resources>

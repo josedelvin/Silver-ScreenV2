@@ -12,8 +12,8 @@
         android:title="Search" />
     <item
         android:id="@+id/wishlist"
-        android:title="Wishlist"
-        android:icon="@drawable/baseline_wishlist_24"
+        android:title="Trivia"
+        android:icon="@drawable/baseline_question_answer_24"
         />
     <item
         android:id="@+id/profile"

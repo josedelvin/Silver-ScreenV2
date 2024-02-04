@@ -2,6 +2,7 @@ package com.example.silver_screen;
 
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.ShapeDrawable;
@@ -269,21 +270,36 @@ public class TriviaFragment extends Fragment implements View.OnClickListener {
         if (canAnswer) {
             String buttonText = button.getText().toString().trim();
 
+            // Retrieve the existing drawable from the button_style_transparent of Register Button
+            Drawable existingDrawable = ContextCompat.getDrawable(getContext(), R.drawable.button_style_transparent);
+
+            // Create a copy of the existing drawable to avoid modifying the original
+            Drawable modifiedDrawable = existingDrawable.mutate();
+
+            // Apply color filter to change the background color
+            int color;
             if (answer.equals(buttonText)) {
-                button.setBackground(ContextCompat.getDrawable(getContext(), R.color.greenColor));
-                correctAnswer++;
+                color = ContextCompat.getColor(getContext(), R.color.greenColor);
                 ansFeedbackTv.setText("Correct Answer");
+                correctAnswer++;
             } else {
-                button.setBackground(ContextCompat.getDrawable(getContext(), R.color.redColor));
-                wrongAnswer++;
+                color = ContextCompat.getColor(getContext(), R.color.redColor);
                 ansFeedbackTv.setText("Wrong Answer \nCorrect Answer :" + answer);
+                wrongAnswer++;
             }
+
+            modifiedDrawable.setColorFilter(new PorterDuffColorFilter(color, PorterDuff.Mode.SRC));
+
+            // Set the updated drawable as the background for the button
+            button.setBackground(modifiedDrawable);
 
             canAnswer = false;
             countDownTimer.cancel();
             showNextBtn();
         }
     }
+
+
 
 
 
