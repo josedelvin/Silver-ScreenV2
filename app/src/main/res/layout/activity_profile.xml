@@ -135,12 +135,12 @@
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
-            android:theme="@style/Theme.SilverScreen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:background="@color/black"
-            app:itemTextColor="@color/white"
+            android:theme="@style/Theme.SilverScreen"
+            app:itemTextColor="#FFEB3B"
             app:menu="@menu/bottom_nav_menu"
             tools:ignore="MissingConstraints" />
 

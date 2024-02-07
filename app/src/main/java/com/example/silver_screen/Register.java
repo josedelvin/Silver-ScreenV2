@@ -30,18 +30,18 @@ public class Register extends AppCompatActivity {
     private Button registerBtn;
     private FirebaseAuth mAuth;
 
-    // If user is already logged in will automatically redirect to Home page
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//        // Check if user is signed in (non-null) and update UI accordingly.
-//        FirebaseUser currentUser = mAuth.getCurrentUser();
-//        if(currentUser != null){
-//            Intent i = new Intent(getApplication(), Home.class);
-//            startActivity(i);
-//            finish();
-//        }
-//    }
+     //If user is already logged in will automatically redirect to Home page
+    @Override
+    public void onStart() {
+        super.onStart();
+        // Check if user is signed in (non-null) and update UI accordingly.
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if(currentUser != null){
+            Intent i = new Intent(getApplication(), Home.class);
+            startActivity(i);
+            finish();
+        }
+    }
     // user password validation
     private boolean isPasswordValid(String password) {
         // It should contain at least one digit, one lowercase letter, one uppercase letter, and one special character and 6 characters long
@@ -102,7 +102,7 @@ public class Register extends AppCompatActivity {
                                             // Save user data to the database with UID
                                             DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users").child(uid);
 
-                                            User newUser = new User(uid, username, email, password, null); // Originally set to NUll
+                                            User newUser = new User(uid, username, email, password, null,null); // Originally set to NUll
                                             usersRef.setValue(newUser);
 
                                             // Sign in success, update UI with the signed-in user's information

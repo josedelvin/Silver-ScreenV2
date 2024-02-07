@@ -1,6 +1,7 @@
     package com.example.silver_screen;
 
     import android.content.Intent;
+    import android.content.res.ColorStateList;
     import android.os.Bundle;
     import android.text.TextUtils;
     import android.util.Log;
@@ -11,6 +12,7 @@
     import androidx.annotation.Nullable;
     import androidx.appcompat.app.AppCompatActivity;
     import androidx.appcompat.widget.SearchView;
+    import androidx.core.content.ContextCompat;
     import androidx.fragment.app.Fragment;
     import androidx.recyclerview.widget.GridLayoutManager;
     import androidx.recyclerview.widget.RecyclerView;
@@ -93,6 +95,10 @@
                     } else if (itemId == R.id.search) {
                         // Already on DiscoverActivity, no need to navigate
                         return true;
+                    } else if (itemId == R.id.wishlist1) {
+                        // Navigate to MainTriviaPage
+                        startActivity(new Intent(DiscoverActivity.this, WishlistActivity.class));
+                        return true;
                     } else if (itemId == R.id.wishlist) {
                         // Navigate to MainTriviaPage
                         startActivity(new Intent(DiscoverActivity.this, MainTriviaPage.class));
@@ -106,7 +112,19 @@
                     return false;
                 }
             });
+// Customize colors for selected and unselected states
+            int[][] states = new int[][] {
+                    new int[] { android.R.attr.state_selected },
+                    new int[] { -android.R.attr.state_selected }
+            };
 
+            int[] colors = new int[] {
+                    ContextCompat.getColor(DiscoverActivity.this, R.color.yellow),
+                    ContextCompat.getColor(DiscoverActivity.this, R.color.yellow)
+            };
+
+            ColorStateList colorStateList = new ColorStateList(states, colors);
+            bottomNavigationView.setItemIconTintList(colorStateList);
             bottomNavigationView.setSelectedItemId(R.id.search);
 
         }

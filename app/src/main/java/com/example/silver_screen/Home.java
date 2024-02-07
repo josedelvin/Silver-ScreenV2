@@ -1,11 +1,13 @@
 package com.example.silver_screen;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -135,6 +137,11 @@ public class Home extends AppCompatActivity {
                     // Navigate to DiscoverActivity
                     startActivity(new Intent(Home.this, DiscoverActivity.class));
                     return true;
+                }
+                 else if (itemId == R.id.wishlist1) {
+                        // Navigate to DiscoverActivity
+                        startActivity(new Intent(Home.this, WishlistActivity.class));
+                        return true;
                 } else if (itemId == R.id.wishlist) {
                     // Navigate to MainTriviaPage
                     startActivity(new Intent(Home.this, MainTriviaPage.class));
@@ -148,6 +155,22 @@ public class Home extends AppCompatActivity {
                 return false; // Important for correct functioning
             }
         });
+        // Customize colors for selected and unselected states
+        int[][] states = new int[][] {
+                new int[] { android.R.attr.state_selected },
+                new int[] { -android.R.attr.state_selected }
+        };
+
+        int[] colors = new int[] {
+                ContextCompat.getColor(Home.this, R.color.yellow),
+                ContextCompat.getColor(Home.this, R.color.yellow)
+        };
+
+        ColorStateList colorStateList = new ColorStateList(states, colors);
+        bottomNavigationView.setItemIconTintList(colorStateList);
+
+        bottomNavigationView.setSelectedItemId(R.id.home);
+
     }
 
     private void loadCarouselImagesFromDatabase() {
