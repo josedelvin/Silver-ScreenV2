@@ -61,6 +61,9 @@
         <action
             android:id="@+id/action_triviaResultFragment_to_triviaListFragment"
             app:destination="@id/triviaListFragment" />
+        <argument
+            android:name="result"
+            app:argType="integer[]" />
     </fragment>
     <activity
         android:id="@+id/mainActivity"

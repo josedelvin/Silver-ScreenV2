@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.login_btn).setOnClickListener(this);
         findViewById(R.id.register_btn).setOnClickListener(this);
-        findViewById(R.id.homepage_btn).setOnClickListener(this);
     }
 
 
@@ -38,13 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            Intent i3 = new Intent(this, DiscoverActivity.class);
 //            startActivity(i3);
 //        }
-        else if (id == R.id.homepage_btn) {
-            Intent i3 = new Intent(this, Home.class);
-            startActivity(i3);
-//            // Navigate to TriviaListFragment
-//            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-//            navController.navigate(R.id.triviaListFragment);
-        }
+
     }
 
 

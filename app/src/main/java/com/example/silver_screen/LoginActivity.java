@@ -100,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
                             String emailFromDB = user.getEmail();
                             String usernameFromDB = user.getEmail();  // Using email as username
 
-                            Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, Home.class);
                             intent.putExtra("name", nameFromDB);
                             intent.putExtra("email", emailFromDB);
                             intent.putExtra("username", usernameFromDB);

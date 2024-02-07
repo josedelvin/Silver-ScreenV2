@@ -8,7 +8,6 @@ import android.graphics.drawable.LayerDrawable;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.RoundRectShape;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
@@ -263,7 +262,14 @@ public class TriviaFragment extends Fragment implements View.OnClickListener {
 
         // TriviaResultFragment not working
 //        navController.navigate(R.id.action_triviaFragment_to_triviaResultFragment);
-        navController.navigate(R.id.action_triviaFragment_to_triviaListFragment);
+//        navController.navigate(R.id.action_triviaFragment_to_triviaListFragment);
+
+        int[] results = {correctAnswer, wrongAnswer, notAnswered};
+
+        // Pass the results array to the TriviaResultFragment using Safe Args
+        TriviaFragmentDirections.ActionTriviaFragmentToTriviaResultFragment action =
+                TriviaFragmentDirections.actionTriviaFragmentToTriviaResultFragment(results);
+        navController.navigate(action);
     }
 
     private void verifyAnswer(Button button) {

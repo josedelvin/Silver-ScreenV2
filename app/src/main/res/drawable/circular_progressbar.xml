@@ -11,11 +11,12 @@
         android:shape="ring"
         android:innerRadiusRatio="2.5">
 
+        <!-- this line fixes the issue for lollipop api 21 -->
         <gradient
             android:useLevel="false"
             android:type="sweep"
             android:startColor="@color/yellow"
-            android:endColor="@color/white"
+            android:endColor="@color/yellow"
             android:angle="0"/>
 
     </shape>
