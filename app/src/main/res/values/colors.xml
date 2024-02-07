@@ -13,7 +13,7 @@
     <color name="greenColor">#00FF00</color>
     <color name="redColor">#FF0000</color>
     <color name="grey">#808080</color>
-
+    <color name="transparent">#00000000</color>
 
     <color name="chipBackground">#1e1d29</color>
         <color name="chipText">#BCBCBC</color>

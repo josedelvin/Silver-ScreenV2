@@ -85,6 +85,12 @@
             android:exported="false"
             android:label="EditProfile"
             />
+        <activity
+            android:name=".WishlistActivity"
+            android:theme="@style/Theme.SilverScreen"
+            android:exported="false"
+            android:label="wishlist"
+            />
         <!--        <activity android:name=".MainActivity"></activity>-->
 
 

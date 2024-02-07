@@ -32,6 +32,10 @@ public class MainTriviaPage extends AppCompatActivity {
                     // Navigate to DiscoverActivity
                     startActivity(new Intent(MainTriviaPage.this, DiscoverActivity.class));
                     return true;
+                } else if (itemId == R.id.wishlist1) {
+                    // Navigate to Wishlist
+                    startActivity(new Intent(MainTriviaPage.this, WishlistActivity.class));
+                    return true;
                 } else if (itemId == R.id.wishlist) {
                     // Already on MainTriviaPage, no need to navigate
                     return true;
@@ -52,8 +56,8 @@ public class MainTriviaPage extends AppCompatActivity {
         };
 
         int[] colors = new int[] {
-                ContextCompat.getColor(MainTriviaPage.this, R.color.white),
-                ContextCompat.getColor(MainTriviaPage.this, R.color.grey)
+                ContextCompat.getColor(MainTriviaPage.this, R.color.yellow),
+                ContextCompat.getColor(MainTriviaPage.this, R.color.yellow)
         };
 
         ColorStateList colorStateList = new ColorStateList(states, colors);

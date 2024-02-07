@@ -4,12 +4,16 @@
     <item
         android:id="@+id/home"
         android:icon="@drawable/baseline_home_24"
-        android:title="Home"
-        />
+        android:title="Home" />
     <item
         android:id="@+id/search"
         android:icon="@drawable/baseline_youtube_searched_for_24"
         android:title="Search" />
+    <item
+        android:id="@+id/wishlist1"
+        android:title="Wishlist"
+        android:icon="@drawable/baseline_wishlist_24"
+        />
     <item
         android:id="@+id/wishlist"
         android:title="Trivia"

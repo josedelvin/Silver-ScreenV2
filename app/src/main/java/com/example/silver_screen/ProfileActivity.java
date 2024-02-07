@@ -103,8 +103,13 @@ public class ProfileActivity extends AppCompatActivity {
                     // Navigate to DiscoverActivity
                     startActivity(new Intent(ProfileActivity.this, DiscoverActivity.class));
                     return true;
+                }
+                    else if (itemId == R.id.wishlist1) {
+                        // Navigate to MainTriviaPage
+                        startActivity(new Intent(ProfileActivity.this, WishlistActivity.class));
+                        return true;
                 } else if (itemId == R.id.wishlist) {
-                    // Already on MainTriviaPage, no need to navigate
+                    startActivity(new Intent(ProfileActivity.this, MainTriviaPage.class));
                     return true;
                 } else if (itemId == R.id.profile) {
                     // Already in Profile page so no need to navigate
@@ -122,8 +127,8 @@ public class ProfileActivity extends AppCompatActivity {
         };
 
         int[] colors = new int[] {
-                ContextCompat.getColor(ProfileActivity.this, R.color.white),
-                ContextCompat.getColor(ProfileActivity.this, R.color.grey)
+                ContextCompat.getColor(ProfileActivity.this, R.color.yellow),
+                ContextCompat.getColor(ProfileActivity.this, R.color.yellow)
         };
 
         ColorStateList colorStateList = new ColorStateList(states, colors);
