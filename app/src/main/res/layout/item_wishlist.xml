@@ -1,0 +1,29 @@
+<!-- item_wishlist.xml -->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder_image" />
+
+        <TextView
+            android:id="@+id/deletefunction"
+            android:text="Delete from wishlist function"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!-- Add other movie details here, like title, description, etc. -->
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
